@@ -1,6 +1,9 @@
 const {
   shipProduct,
 } = require("./shipItApi");
+const shipItApi = require("./shipItApi");
+
+shipItApi.shipProduct = jest.fn();
 
 
 test("shipProduct", async function () {

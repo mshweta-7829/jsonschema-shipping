@@ -15,7 +15,7 @@ const { shipProduct } = require("../shipItApi");
  *
  * Returns { shipped: shipId }
  */
-router.post("/", async function (req, res, next) {
+router.post("/", async function shipment (req, res, next) {
   try {
     const result = jsonschema.validate(req.body, shipSchema);
     
@@ -33,3 +33,4 @@ router.post("/", async function (req, res, next) {
 
 
 module.exports = router;
+// module.exports = { router, shipment };
